@@ -7,7 +7,7 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
-.material-icons-outlined {
+.mafoot.footer-left-outlined {
   vertical-align: middle;
   line-height: 1px;
 }
@@ -487,5 +487,31 @@ body {
 @media screen and (max-width: 576px) {
   .footer-left {
     display: none;
+  }
+}
+
+.footer-left {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.footer-left a {
+  display: inline-block;
+  margin: 0 10px;
+  font-size: 24px;
+  color: #888;
+}
+
+/* Media Queries */
+@media (max-width: 577px) {
+  .footer-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer-left a {
+    display: inline-block;
+    margin: 0 5px;
   }
 }
