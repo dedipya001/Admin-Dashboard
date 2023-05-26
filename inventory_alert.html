@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inventory Alert</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f7f7f7;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th,
+    td {
+      padding: 10px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+
+    .flag {
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      background-color: red;
+      border-radius: 50%;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 8px 12px;
+      background-color: #4f35a1;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .btn-add {
+      margin-right: 10px;
+    }
+
+    @media screen and (max-width: 600px) {
+      table {
+        display: block;
+        overflow-x: auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Inventory Alert !!!</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Product Name</th>
+          <th>Stocks Left</th>
+          <th>Alert</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Product 1</td>
+          <td>5</td>
+          <td><span class="flag"></span></td>
+          <td>
+            <button class="btn btn-add">Add</button>
+            <button class="btn btn-remove">Remove</button>
+          </td>
+        </tr>
+        <tr>
+          <td>Product 2</td>
+          <td>5</td>
+          <td><span class="flag"></span></td>
+          <td>
+            <button class="btn btn-add">Add</button>
+            <button class="btn btn-remove">Remove</button>
+          </td>
+        </tr>
+        <tr>
+          <td>Product 3</td>
+          <td>5</td>
+          <td><span class="flag"></span></td>
+          <td>
+            <button class="btn btn-add">Add</button>
+            <button class="btn btn-remove">Remove</button>
+          </td>
+        </tr>
+        <tr>
+          <td>Product 4</td>
+          <td>5</td>
+          <td><span class="flag"></span></td>
+          <td>
+            <button class="btn btn-add">Add</button>
+            <button class="btn btn-remove">Remove</button>
+          </td>
+        </tr>
+        <tr>
+          <td>Product 5</td>
+          <td>5</td>
+          <td><span class="flag"></span></td>
+          <td>
+            <button class="btn btn-add">Add</button>
+            <button class="btn btn-remove">Remove</button>
+          </td>
+        </tr>
+        <tr>
+          <td>Product 6</td>
+          <td>5</td>
+          <td><span class="flag"></span></td>
+          <td>
+            <button class="btn btn-add">Add</button>
+            <button class="btn btn-remove">Remove</button>
+          </td>
+        </tr>
+        <tr>
+          <td>Product 7</td>
+          <td>5</td>
+          <td><span class="flag"></span></td>
+          <td>
+            <button class="btn btn-add">Add</button>
+            <button class="btn btn-remove">Remove</button>
+          </td>
+        </tr>
+        <tr>
+          <td>Product 8</td>
+          <td>5</td>
+          <td><span class="flag"></span></td>
+          <td>
+            <button class="btn btn-add">Add</button>
+            <button class="btn btn-remove">Remove</button>
+          </td>
+        </tr>
+        <tr>
+          <td>Product 9</td>
+          <td>5</td>
+          <td><span class="flag"></span></td>
+          <td>
+            <button class="btn btn-add">Add</button>
+            <button class="btn btn-remove">Remove</button>
+          </td>
+        </tr>
+        <tr>
+          <td>Product 10</td>
+          <td>5</td>
+          <td><span class="flag"></span></td>
+          <td>
+            <button class="btn btn-add">Add</button>
+            <button class="btn btn-remove">Remove</button>
+          </td>
+        </tr>
+        <!-- Add more rows for additional products -->
+      </tbody>
+    </table>
+  </div>
+
+  <script>
+    // Get all the remove buttons
+    const removeButtons = document.querySelectorAll('.btn-remove');
+
+    // Add click event listener to each remove button
+    removeButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const row = button.parentNode.parentNode;
+        row.parentNode.removeChild(row);
+      });
+    });
+
+    // Get the add button
+    const addButton = document.querySelector('.btn-add');
+
+    // Add click event listener to the add button
+    addButton.addEventListener('click', () => {
+      const tbody = document.querySelector('tbody');
+      const newRow = document.createElement('tr');
+      newRow.innerHTML = `
+        <td>New Product</td>
+        <td>10</td>
+        <td></td>
+        <td>
+          <button class="btn btn-add">Add</button>
+          <button class="btn btn-remove">Remove</button>
+        </td>
+      `;
+      tbody.appendChild(newRow);
+    });
+  </script>
+</body>
+
+</html>

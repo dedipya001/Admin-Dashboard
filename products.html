@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products</title>
+  <style>
+    /* Global Styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Container Styles */
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* Table Styles */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    th,
+    td {
+      padding: 10px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+
+    /* Button Styles */
+    .btn {
+      padding: 5px 10px;
+      background-color: #4f35a1;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    /* Chart Styles */
+    .chart-container {
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    /* Total Count Styles */
+    .total-count {
+      font-size: 24px;
+      font-weight: bold;
+      color: #4f35a1;
+      margin-top: 20px;
+      animation: blink 1s infinite;
+    }
+
+    @keyframes blink {
+      0% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    /* Media Queries */
+    @media (max-width: 600px) {
+      table {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Products Platform</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th>Price</th>
+          <th>Description</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Product 1</td>
+          <td>$19.99</td>
+          <td>Description of Product 1</td>
+          <td>
+            <button class="btn btn-remove">Remove</button>
+          </td>
+        </tr>
+        <tr>
+          <td>Product 2</td>
+          <td>$29.99</td>
+          <td>Description of Product 2</td>
+          <td>
+            <button class="btn btn-remove">Remove</button>
+          </td>
+        </tr>
+        <!-- Add more rows for other products -->
+        <tr>
+          <td>Product 3</td>
+          <td>$39.99</td>
+          <td>Description of Product 3</td>
+          <td>
+            <button class="btn btn-remove">Remove</button>
+          </td>
+        </tr>
+        <tr>
+          <td>Product 4</td>
+          <td>$49.99</td>
+          <td>Description of Product 4</td>
+          <td>
+            <button class="btn btn-remove">Remove</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="chart-container">
+      <canvas id="pieChart"></canvas>
+    </div>
+    <div class="total-count">
+      Total Products Available: <span id="totalCount">0</span>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    // Get all remove buttons
+    const removeButtons = document.querySelectorAll('.btn-remove');
+
+    // Add click event listener to each remove button
+    removeButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        const row = button.parentNode.parentNode;
+        row.parentNode.removeChild(row);
+      });
+    });
+
+    // Chart Data
+    const productData = {
+      labels: ['Product 1', 'Product 2', 'Product 3', 'Product 4'],
+      datasets: [{
+        data: [10, 15, 5, 8], // Replace with actual data
+        backgroundColor: ['#4f35a1', '#5da5db', '#fcb150', '#a4c73c']
+      }]
+    };
+
+    // Chart Options
+    const chartOptions = {
+      responsive: true,
+      maintainAspectRatio: false,
+      legend: {
+        position: 'bottom',
+        labels: {
+          boxWidth: 12
+        }
+      }
+    };
+
+    // Create Pie Chart
+    const pieChart = new Chart(document.getElementById('pieChart'), {
+      type: 'pie',
+      data: productData,
+      options: chartOptions
+    });
+
+    // Calculate total count
+    const totalCountElement = document.getElementById('totalCount');
+    const quantities = [10, 15, 5, 10]; // Replace with actual quantities
+    const totalCount = quantities.reduce((total, quantity) => total + quantity, 0);
+    totalCountElement.innerText = totalCount.toString();
+  </script>
+</body>
+
+</html>

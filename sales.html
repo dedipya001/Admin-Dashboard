@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sales Orders</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f7f7f7;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th,
+    td {
+      padding: 10px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+
+    @media screen and (max-width: 600px) {
+      table {
+        display: block;
+        overflow-x: auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Sales Platform</h1>
+  <div class="container">
+    <h1>Sales Orders</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Product</th>
+          <th>Price</th>
+          <th>Remarks</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Person 1</td>
+          <td>Product 1</td>
+          <td>$49.99</td>
+          <td>★★★★☆</td>
+        </tr>
+        <tr>
+          <td>Person 2</td>
+          <td>Product 2</td>
+          <td>$59.99</td>
+          <td>★★★☆☆</td>
+        </tr>
+        <tr>
+          <td>Person 3</td>
+          <td>Product 3</td>
+          <td>$69.99</td>
+          <td>★★★★★</td>
+        </tr>
+        <tr>
+          <td>Person 4</td>
+          <td>Product 4</td>
+          <td>$79.99</td>
+          <td>★★☆☆☆</td>
+        </tr>
+        <tr>
+          <td>Person 5</td>
+          <td>Product 5</td>
+          <td>$89.99</td>
+          <td>★★★☆☆</td>
+        </tr>
+        <tr>
+          <td>Person 6</td>
+          <td>Product 6</td>
+          <td>$99.99</td>
+          <td>★★★★★</td>
+        </tr>
+        <tr>
+          <td>Person 7</td>
+          <td>Product 7</td>
+          <td>$109.99</td>
+          <td>★★★☆☆</td>
+        </tr>
+        <tr>
+          <td>Person 8</td>
+          <td>Product 8</td>
+          <td>$119.99</td>
+          <td>★★★☆☆</td>
+        </tr>
+        <tr>
+          <td>Person 9</td>
+          <td>Product 9</td>
+          <td>$129.99</td>
+          <td>★★★★★</td>
+        </tr>
+        <tr>
+          <td>Person 10</td>
+          <td>Product 10</td>
+          <td>$139.99</td>
+          <td>★★★★★</td>
+        </tr>
+        <tr>
+          <td>Person 11</td>
+          <td>Product 11</td>
+          <td>$149.99</td>
+          <td>★★★☆☆</td>
+        </tr>
+        <tr>
+          <td>Person 12</td>
+          <td>Product 12</td>
+          <td>$149.99</td>
+          <td>★★★☆☆</td>
+        </tr>
+        <tr>
+          <td>Person 13</td>
+          <td>Product 13</td>
+          <td>$149.99</td>
+          <td>★★★☆☆</td>
+        </tr>
+        <tr>
+          <td>Person 14</td>
+          <td>Product 14</td>
+          <td>$149.99</td>
+          <td>★★★☆☆</td>
+        </tr>
+        <tr>
+          <td>Person 15</td>
+          <td>Product 15</td>
+          <td>$149.99</td>
+          <td>★★★☆☆</td>
+        </tr>
+        <tr>
+          <td>Person 16</td>
+          <td>Product 16</td>
+          <td>$149.99</td>
+          <td>★★★☆☆</td>
+        </tr>
+        <tr>
+          <td>Person 17</td>
+          <td>Product 17</td>
+          <td>$149.99</td>
+          <td>★★★☆☆</td>
+        </tr>
+        <tr>
+          <td>Person 18</td>
+          <td>Product 18</td>
+          <td>$149.99</td>
+          <td>★★★☆☆</td>
+        </tr>
+        <tr>
+          <td>Person 19</td>
+          <td>Product 19</td>
+          <td>$149.99</td>
+          <td>★★★☆☆</td>
+        </tr>
+        <tr>
+          <td>Person 11</td>
+          <td>Product 11</td>
+          <td>$149.99</td>
+          <td>★★★☆☆</td>
+        </tr>
+        <tr>
+          <td>Person 11</td>
+          <td>Product 11</td>
+          <td>$149.99</td>
+          <td>★★★☆☆</td>
+        </tr>
+        <tr>
+          <td>Person 11</td>
+          <td>Product 11</td>
+          <td>$149.99</td>
+          <td>★★★☆☆</td>
+        </tr>
+        <tr>
+          <td>Person 11</td>
+          <td>Product 11</td>
+          <td>$149.99</td>
+          <td>★★★☆☆</td>
+        </tr>
+        <tr>
+          <td>Person 11</td>
+          <td>Product 11</td>
+          <td>$149.99</td>
+          <td>★★★☆☆</td>
+        </tr>
+        <tr>
+          <td>Person 11</td>
+          <td>Product 11</td>
+          <td>$149.99</td>
+          <td>★★★☆☆</td>
+        </tr>
+        <tr>
+          <td>Person 11</td>
+          <td>Product 11</td>
+          <td>$149.99</td>
+          <td>★★★☆☆</td>
+        </tr>
+        <tr>
+          <td>Person 11</td>
+          <td>Product 11</td>
+          <td>$149.99</td>
+          <td>★★★☆☆</td>
+        </tr>
+        <tr>
+          <td>Person 11</td>
+          <td>Product 11</td>
+          <td>$149.99</td>
+          <td>★★★☆☆</td>
+        </tr>
+        <tr>
+          <td>Person 11</td>
+          <td>Product 11</td>
+          <td>$149.99</td>
+          <td>★★★☆☆</td>
+        </tr>
+        <tr>
+          <td>Person 11</td>
+          <td>Product 11</td>
+          <td>$149.99</td>
+          <td>★★★☆☆</td>
+        </tr>
+        <tr>
+          <td>Person 11</td>
+          <td>Product 11</td>
+          <td>$149.99</td>
+          <td>★★★☆☆</td>
+        </tr>
+        <tr>
+          <td>Person 11</td>
+          <td>Product 11</td>
+          <td>$149.99</td>
+          <td>★★★☆☆</td>
+        </tr>
+        <tr>
+          <td>Person 11</td>
+          <td>Product 11</td>
+          <td>$149.99</td>
+          <td>★★★☆☆</td>
+        </tr>
+        <tr>
+          <td>Person 11</td>
+          <td>Product 11</td>
+          <td>$149.99</td>
+          <td>★★★☆☆</td>
+        </tr>
+        <tr>
+          <td>Person 11</td>
+          <td>Product 11</td>
+          <td>$149.99</td>
+          <td>★★★☆☆</td>
+        </tr>
+        <tr>
+          <td>Person 11</td>
+          <td>Product 11</td>
+          <td>$149.99</td>
+          <td>★★★☆☆</td>
+        </tr>
+        <tr>
+          <td>Person 11</td>
+          <td>Product 11</td>
+          <td>$149.99</td>
+          <td>★★★☆☆</td>
+        </tr>
+        <tr>
+          <td>Person 11</td>
+          <td>Product 11</td>
+          <td>$149.99</td>
+          <td>★★★☆☆</td>
+        </tr>
+        <tr>
+          <td>Person 11</td>
+          <td>Product 11</td>
+          <td>$149.99</td>
+          <td>★★★☆☆</td>
+        </tr>
+        <tr>
+          <td>Person 11</td>
+          <td>Product 11</td>
+          <td>$149.99</td>
+          <td>★★★☆☆</td>
+        </tr>
+        <tr>
+          <td>Person 11</td>
+          <td>Product 11</td>
+          <td>$149.99</td>
+          <td>★★★☆☆</td>
+        </tr>
+        <tr>
+          <td>Person 11</td>
+          <td>Product 11</td>
+          <td>$149.99</td>
+          <td>★★★☆☆</td>
+        </tr>
+        <tr>
+          <td>Person 11</td>
+          <td>Product 11</td>
+          <td>$149.99</td>
+          <td>★★★☆☆</td>
+        </tr>
+        <tr>
+          <td>Person 11</td>
+          <td>Product 11</td>
+          <td>$149.99</td>
+          <td>★★★☆☆</td>
+        </tr>
+        <tr>
+          <td>Person 11</td>
+          <td>Product 11</td>
+          <td>$149.99</td>
+          <td>★★★☆☆</td>
+        </tr>
+        <tr>
+          <td>Person 11</td>
+          <td>Product 11</td>
+          <td>$149.99</td>
+          <td>★★★☆☆</td>
+        </tr>
+        <tr>
+          <td>Person 11</td>
+          <td>Product 11</td>
+          <td>$149.99</td>
+          <td>★★★☆☆</td>
+        </tr>
+        <tr>
+          <td>Person 11</td>
+          <td>Product 11</td>
+          <td>$149.99</td>
+          <td>★★★☆☆</td>
+        </tr>
+        <tr>
+          <td>Person 11</td>
+          <td>Product 11</td>
+          <td>$149.99</td>
+          <td>★★★☆☆</td>
+        </tr>
+        <tr>
+          <td>Person 11</td>
+          <td>Product 11</td>
+          <td>$149.99</td>
+          <td>★★★☆☆</td>
+        </tr>
+        <tr>
+          <td>Person 11</td>
+          <td>Product 11</td>
+          <td>$149.99</td>
+          <td>★★★☆☆</td>
+        </tr>
+        <tr>
+          <td>Person 11</td>
+          <td>Product 11</td>
+          <td>$149.99</td>
+          <td>★★★☆☆</td>
+        </tr>
+        <tr>
+          <td>Person 11</td>
+          <td>Product 11</td>
+          <td>$149.99</td>
+          <td>★★★☆☆</td>
+        </tr>
+        <tr>
+          <td>Person 11</td>
+          <td>Product 11</td>
+          <td>$149.99</td>
+          <td>★★★☆☆</td>
+        </tr>
+        <tr>
+          <td>Person 11</td>
+          <td>Product 11</td>
+          <td>$149.99</td>
+          <td>★★★☆☆</td>
+        </tr>
+        <tr>
+          <td>Person 11</td>
+          <td>Product 11</td>
+          <td>$149.99</td>
+          <td>★★★☆☆</td>
+        </tr>
+        <tr>
+          <td>Person 11</td>
+          <td>Product 11</td>
+          <td>$149.99</td>
+          <td>★★★☆☆</td>
+        </tr>
+        <tr>
+          <td>Person 11</td>
+          <td>Product 11</td>
+          <td>$149.99</td>
+          <td>★★★☆☆</td>
+        </tr>
+        <tr>
+          <td>Person 11</td>
+          <td>Product 11</td>
+          <td>$149.99</td>
+          <td>★★★☆☆</td>
+        </tr>
+        <tr>
+          <td>Person 11</td>
+          <td>Product 11</td>
+          <td>$149.99</td>
+          <td>★★★☆☆</td>
+        </tr>
+        <tr>
+          <td>Person 11</td>
+          <td>Product 11</td>
+          <td>$149.99</td>
+          <td>★★★☆☆</td>
+        </tr>
+        <tr>
+          <td>Person 11</td>
+          <td>Product 11</td>
+          <td>$149.99</td>
+          <td>★★★☆☆</td>
+        </tr>
+        <tr>
+          <td>Person 11</td>
+          <td>Product 11</td>
+          <td>$149.99</td>
+          <td>★★★☆☆</td>
+        </tr>
+        <tr>
+          <td>Person 11</td>
+          <td>Product 11</td>
+          <td>$149.99</td>
+          <td>★★★☆☆</td>
+        </tr>
+        <tr>
+          <td>Person 11</td>
+          <td>Product 11</td>
+          <td>$149.99</td>
+          <td>★★★☆☆</td>
+        </tr>
+        <tr>
+          <td>Person 11</td>
+          <td>Product 11</td>
+          <td>$149.99</td>
+          <td>★★★☆☆</td>
+        </tr>
+        <tr>
+          <td>Person 11</td>
+          <td>Product 11</td>
+          <td>$149.99</td>
+          <td>★★★☆☆</td>
+        </tr>
+        <tr>
+          <td>Person 11</td>
+          <td>Product 11</td>
+          <td>$149.99</td>
+          <td>★★★☆☆</td>
+        </tr>
+        <tr>
+          <td>Person 11</td>
+          <td>Product 11</td>
+          <td>$149.99</td>
+          <td>★★★☆☆</td>
+        </tr>
+        <tr>
+          <td>Person 11</td>
+          <td>Product 11</td>
+          <td>$149.99</td>
+          <td>★★★☆☆</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+
+</html>

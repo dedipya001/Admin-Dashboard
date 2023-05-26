@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Admin Dashboard</title>
+
+    <!-- Montserrat Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+   <!-- bootstrap -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+   <!-- javascript -->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+   <!-- font-awesome -->
+   <script src="https://kit.fontawesome.com/3715e2b643.js" crossorigin="anonymous"></script>
+
+    <!-- Material library -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+  </head>
+  <body>
+    <div class="grid-container">
+
+    
+      <!-- End footer -->
+
+      <!-- Sidebar -->
+      <aside id="sidebar">
+        <div class="sidebar-title">
+          <div class="sidebar-brand">
+            <span class="material-icons-outlined">inventory</span> My Project
+          </div>
+          <span class="material-icons-outlined" onclick="closeSidebar()">close</span>
+        </div>
+
+        <ul class="sidebar-list">
+          <li class="sidebar-list-item">
+            <a href="#" target="_blank">
+              <span class="material-icons-outlined">dashboard</span> Dashboard
+            </a>
+          </li>
+          <li class="sidebar-list-item">
+            <a href="/products.html" target="_blank">
+              <span class="material-icons-outlined">inventory_2</span> Products
+            </a>
+          </li>
+          <li class="sidebar-list-item">
+            <a href="/purchase_orders.html">
+              <span class="material-icons-outlined">add_shopping_cart</span> Purchase Orders
+            </a>
+          </li>
+          <li class="sidebar-list-item">
+            <a href="/about.html">
+              <span class="material-icons-outlined">info</span> About
+            </a>
+          </li>
+        </ul>
+      </aside>
+      <!-- End Sidebar -->
+
+      <!-- Main -->
+      <main class="main-container">
+        <div class="main-title">
+          <p class="font-weight-bold">DASHBOARD</p>
+        </div>
+
+        <div class="main-cards">
+
+          <div class="card">
+            <div class="card-inner">
+              <p class="text-primary" id="purchaseproductlink" onclick="redirectToProducts()" >PRODUCTS</p>
+              <span class="material-icons-outlined text-blue">inventory_2</span>
+            </div>
+            <span class="text-primary font-weight-bold">40</span>
+          </div>
+
+          <div class="card">
+            <div class="card-inner">
+              <p class="text-primary"><a href="/purchase_orders.html" id="purchaseOrderLink" onclick="redirectToPurchaseOrders()"> PURCHASE ORDERS</a></p>
+
+              <span class="material-icons-outlined text-orange">add_shopping_cart</span>
+            </div>
+            <span class="text-primary font-weight-bold">4</span>
+          </div>
+          
+          <div class="card">
+            <div class="card-inner">
+              <p class="text-primary" id="salesOrder" onclick="redirectToSales()" style="text-decoration: underline;">SALES ORDERS</p>
+              <span class="material-icons-outlined text-green">shopping_cart</span>
+            </div>
+            <span class="text-primary font-weight-bold">79</span>
+          </div>
+
+          <div class="card">
+            <div class="card-inner">
+              <p class="text-primary" id="inventoryOrder" onclick="redirectToAlert()" style="text-decoration: underline;">INVENTORY ALERTS</p>
+              <span class="material-icons-outlined text-red">notification_important</span>
+            </div>
+            <span class="text-primary font-weight-bold">10</span>
+          </div>
+
+        </div>
+
+        <div class="charts">
+
+          <div class="charts-card">
+            <p class="chart-title">Top 5 Products</p>
+            <div id="bar-chart"></div>
+          </div>
+
+          <div class="charts-card">
+            <p class="chart-title">Purchase and Sales Orders</p>
+            <div id="area-chart"></div>
+          </div>
+
+        </div>
+        <p> <em> © Created by Dedipya Goswami | AP21110010650 as a task given in Augmentik selection round 26-05-2023</em></p>
+      </main>
+      <!-- End Main -->
+
+     <!-- Footer -->
+     <footer class="footer">
+      <div class="menu-icon" onclick="openSidebar()">
+        <span class="material-icons-outlined">menu</span>
+      </div>
+      <div class="footer-left">
+      
+        <a href="https://www.instagram.com/dedipya.goswami/?next=%2F"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://github.com/dedipya001"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/dedipya-goswami-6574a3241/"><i class="fa-brands fa-linkedin"></i></a>
+      </div>
+      <div class="footer-right">
+        <!-- <span class="material-icons-outlined">search</span> -->
+        <!-- <p>Created by Dedipya Goswami as Augmentik task</p> -->
+      </div>
+    </footer>
+    
+    
+    <!-- End Footer -->
+
+    </div>
+
+   
+
+
+    <div id="contact-form" class="hidden">
+      <div id="contact-form-1" class="hidden-1">
+        <span class="close-button" onclick="closeContactForm()">&times;</span>
+        <!-- Rest of the contact form code -->
+      </div>
+      <h2>Contact Form</h2>
+      <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
+        
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea><br>
+        
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+
+
+ <!-- Scripts -->
+    <!-- ApexCharts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.3/apexcharts.min.js"></script>
+    <!-- Custom JS -->
+    <script>
+      function goToPurchaseOrders() {
+        window.location.href = "/purchase_orders.html";
+      }
+    </script>
+    <script src="js/scripts.js"></script>
+
+  </body>
+</html>
