@@ -74,7 +74,7 @@ var barChartOptions = {
     show: false
   },
   xaxis: {
-    categories: ["Laptop", "Phone", "Monitor", "Headphones", "Camera"],
+    categories: ["Product 1", "Product 2", "Product 3", "Product 4", "Product 5"],
   },
   yaxis: {
     title: {
