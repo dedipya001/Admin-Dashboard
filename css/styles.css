@@ -442,10 +442,22 @@ body {
   background-color: #a5aaad;
 }
 
+.footer-menu .material-icons {
+  cursor: pointer;
+}
+
 
 /* ---------- MEDIA QUERIES ---------- */
 
 
+/* Media Queries */
+@media (max-width: 577px) {
+  .footer-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
 /* Medium <= 992px */
 @media screen and (max-width: 992px) {
   .grid-container {
@@ -460,8 +472,16 @@ body {
     display: none;
   }
 
+.material-icons-outlined:hover{
+  cursor: pointer;
+}
+
   .menu-icon {
     display: inline;
+  }
+
+  .menu-icon:hover {
+    cursor: pointer;
   }
 
   .sidebar-title > span {
