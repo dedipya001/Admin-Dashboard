@@ -43,7 +43,7 @@ function redirectToAlert()
 // BAR CHART
 var barChartOptions = {
   series: [{
-    data: [10, 8, 6, 4, 2]
+    data: [10, 8, 11, 7, 2]
   }],
   chart: {
     type: 'bar',
