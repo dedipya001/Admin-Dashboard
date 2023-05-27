@@ -4,6 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
   <title>Sales Orders</title>
   <style>
     body {
@@ -29,6 +31,10 @@
       padding: 10px;
       text-align: left;
       border-bottom: 1px solid #ddd;
+    }
+   canvas
+    {
+      width: 50%;
     }
 
     th {
@@ -180,7 +186,38 @@
         </tr>
       </tbody>
     </table>
+    <canvas id="starsChart"></canvas>
   </div>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    // Get the canvas element
+    var ctx = document.getElementById('starsChart').getContext('2d');
+
+    // Define the data for the doughnut chart
+    var data = {
+      labels: ['★', '★★', '★★★', '★★★★', '★★★★★'],
+      datasets: [{
+        label: 'Number of Customers',
+        data: [0, 4, 2, 6, 8],
+        backgroundColor: ['#ff6384', '#36a2eb', '#cc65fe', '#ffce56', '#4bc0c0']
+      }]
+    };
+
+    // Define the options for the doughnut chart
+    var options = {
+      responsive: true,
+      animation: {
+        animateRotate: true
+      }
+    };
+
+    // Create the doughnut chart
+    var starsChart = new Chart(ctx, {
+      type: 'doughnut',
+      data: data,
+      options: options
+    });
+  </script>
 </body>
 
 </html>
